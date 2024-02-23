@@ -1,16 +1,44 @@
 ---
-
+import PageLayout from "../layout/PageLayout.astro"
+import IndexListItem from "../components/IndexListItem.astro"
+const title="Accueil & Contact"
 ---
+<PageLayout title={title}>
+    <div class="grid lg:grid-cols-2 p-10" >
+        <div class=" flex flex-col items-center items-center text-xl pt-10 ">
+            <ul class="flex flex-col gap-8 text-2xl">
+                <IndexListItem text="Loïc Grancher" src="./img/logos/profile.png" icon="👾" />
+                <IndexListItem text="Developpeur Web Junior" src="./img/logos/work.png" icon="💼"/>
+                <IndexListItem text="loic.grancher@gmail.com" src="./img/logos/mail.png" icon="📧"/>
+                <IndexListItem text="06 79 95 36 43" src="./img/logos/phone.png" icon="📞" />
+                <IndexListItem text="17 rue Louis Philippe - Le Havre" src="./img/logos/home.png" icon="🏠"/>
+                <a href="https://www.linkedin.com/in/loic-grancher-3b586310b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bn0SSOYpVSNSvW1LQ5OM%2B3g%3D%3D">
+                    <div class="flex items-center justify-center border-2 pr-3 py-2 rounded w-max hover:bg-white hover:text-black">
+                        <img src="img/logos/LinkedIn-Symbole.png" class="w-[70px] ">
+                        <p>Linkedin</p>
+                    </div>
+                </a>
+            </ul>
+            <div class="flex gap-3 pl-30 py-10 opacity-60 items-center" >
+                <p>Site réalisé avec</p>
+                <img src="img/logos/astro.png" alt="" class="w-12 h-12">
+                <img src="img/logos/tailwind.png" class="w-12 h-10">
+                <img src="img/logos/typescript.png" class="w-10 h-10">
+            </div>
+        </div>
+        <div class="px-10 flex justify-center lg:-mt-20">
+            <img src="./img/photo_profil.png" alt="" class="max-w-96 object-scale-down">
+        </div>
+    </div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+</PageLayout>
